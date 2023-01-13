@@ -1,6 +1,6 @@
-// Кравец Анастасия Сергеевна
-/*Написать функцию, которая получает в качестве параметров 2 целых числа 
-и возвращает сумму чисел из диапазона между ними.*/
+// РљСЂР°РІРµС† РђРЅР°СЃС‚Р°СЃРёСЏ РЎРµСЂРіРµРµРІРЅР°
+/*РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ, РєРѕС‚РѕСЂР°СЏ РїРѕР»СѓС‡Р°РµС‚ РІ РєР°С‡РµСЃС‚РІРµ РїР°СЂР°РјРµС‚СЂРѕРІ 2 С†РµР»С‹С… С‡РёСЃР»Р° 
+Рё РІРѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ С‡РёСЃРµР» РёР· РґРёР°РїР°Р·РѕРЅР° РјРµР¶РґСѓ РЅРёРјРё.*/
 
 #include <iostream>
 #include <clocale>
@@ -16,7 +16,7 @@ void NumberGenerator(int array[], size_t size) {
 	}
 
 }
-void Сonclusion(int array[], size_t size) {
+void Г‘onclusion(int array[], size_t size) {
 	cout << "{";
 	for (size_t i = 0; i < size; i++) {
 		cout << array[i] << ", ";
@@ -42,22 +42,22 @@ int main() {
 	int end_range = 0;
 	
 	NumberGenerator(array, SIZE);
-	Сonclusion(array, SIZE);
+	Г‘onclusion(array, SIZE);
 
 	do {
-		cout << "Введите начала диапазона: ";
+		cout << "Р’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»Р° РґРёР°РїР°Р·РѕРЅР°: ";
 		cin >> start_range;
-		cout << "Введите конца диапазона: ";
+		cout << "Р’РІРµРґРёС‚Рµ РєРѕРЅС†Р° РґРёР°РїР°Р·РѕРЅР°: ";
 		cin >> end_range;
 		if (start_range < end_range) break;
-		cout << "Вы ввели неверно. Попробуйте снова." << endl;
-		cout << "Начальное число должно быть меньше чем конечное." << endl;
+		cout << "Р’С‹ РІРІРµР»Рё РЅРµРІРµСЂРЅРѕ. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°." << endl;
+		cout << "РќР°С‡Р°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РјРµРЅСЊС€Рµ С‡РµРј РєРѕРЅРµС‡РЅРѕРµ." << endl;
 		system("pause");
 		system("cls");
 	} while (true);
 	
 	int sum_of_negative = Summa(start_range, end_range, array);
-	cout << "Сумма : " << sum_of_negative;
+	cout << "РЎСѓРјРјР°: " << sum_of_negative;
 
 	return 0;
 }
