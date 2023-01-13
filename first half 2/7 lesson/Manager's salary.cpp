@@ -30,9 +30,9 @@ int main() {
 	float salary_amount[NUMBER_OF_MANAGERS];
 	float discount; 
 
-	cout << "Ââåäèòå óðîâåíü ïðîäàæ äëÿ " << NUMBER_OF_MANAGERS << " ìåíåäæåðîâ: " << endl;
+	cout << "Введите уровень продаж для " << NUMBER_OF_MANAGERS << " менеджеров: " << endl;
 	for (size_t i = 0; i < NUMBER_OF_MANAGERS; i++) {
-		cout << i + 1 << " ìåíåäæåðà: ";
+		cout << i + 1 << " менеджера: ";
 		cin >> sales_level[i];
 	}
 	for (size_t i = 0; i < NUMBER_OF_MANAGERS; i++){
@@ -41,7 +41,7 @@ int main() {
 			continue;
 		} 
 		if (sales_level[i] == max) {
-			cout << i + 1 << " ìåíåäæåð èìååò òàêîé æå äîõîä êàê è " << i << " ìåíåäæåð" << endl;
+			cout << i + 1 << " менеджер имеет такой же доход как и " << i << " менеджер" << endl;
 			continue;
 		}
 	}
@@ -63,11 +63,11 @@ int main() {
 	for (size_t i = 0; i < NUMBER_OF_MANAGERS; i++){
 		if (sales_level[i] == max) {
 			salary_amount[i] += PRIZE;
-			cout << "Ëó÷øèé ìåíåäæåð íîìåð: " << i + 1 << endl;
+			cout << "Лучший менеджер номер: " << i + 1 << endl;
 		}
 	}
 	for (size_t i = 0; i < NUMBER_OF_MANAGERS; i++){
-		cout << "Çàðïëàòà " << i + 1 << " ìåíåäæåðà ñîñòàâëÿåò: " << salary_amount[i] << "$" << endl;
+		cout << "Зарплата " << i + 1 << " менеджера составляет: " << salary_amount[i] << "$" << endl;
 	}
 
 	return 0;
