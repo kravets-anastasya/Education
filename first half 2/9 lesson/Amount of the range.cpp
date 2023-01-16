@@ -16,7 +16,7 @@ void NumberGenerator(int array[], size_t size) {
 	}
 
 }
-void Ñonclusion(int array[], size_t size) {
+void Conclusion(int array[], size_t size) {
 	cout << "{";
 	for (size_t i = 0; i < size; i++) {
 		cout << array[i] << ", ";
@@ -42,7 +42,7 @@ int main() {
 	int end_range = 0;
 	
 	NumberGenerator(array, SIZE);
-	Ñonclusion(array, SIZE);
+	Conclusion(array, SIZE);
 
 	do {
 		cout << "Введите начала диапазона: ";
