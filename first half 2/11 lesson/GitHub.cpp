@@ -1,8 +1,8 @@
-// РљСЂР°РІРµС† РђРЅР°СЃС‚Р°СЃРёСЏ РЎРµСЂРіРµРµРІРЅР°
-/*1. РЎРґРµР»Р°С‚СЊ Р·Р°РіРѕР»РѕРІРѕС‡РЅС‹Р№ С„Р°Р№Р» СЃ РЅРµРєРѕС‚РѕСЂС‹РјРё РјР°С‚РµРјР°С‚РёС‡РµСЃРєРёРјРё С„СѓРЅРєС†РёСЏРјРё.
-2. РЎРґРµР»Р°С‚СЊ Р·Р°РіРѕР»РѕРІРѕС‡РЅС‹Р№ С„Р°Р№Р» СЃ С„СѓРЅРєС†РёСЏРјРё РїРѕ СЂР°Р·РґРµР»РµРЅРёСЋ РјР°СЃСЃРёРІР° РЅР° 2 С‡Р°СЃС‚Рё.
-3. РЎРґРµР»Р°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РїРѕРєР°Р·С‹РІР°Р»Р° Р±С‹ СЂР°Р±РѕС‚Сѓ С„СѓРЅРєС†РёР№ РёР· РІР°С€РёС… Р·Р°РіРѕР»РѕРІРѕС‡РЅС‹С… С„Р°Р№Р»РѕРІ.
-4*. Р’С‹Р»РѕР¶РёС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РЅР° GitHub.*/
+// Кравец Анастасия Сергеевна
+/*1. Сделать заголовочный файл с некоторыми математическими функциями.
+2. Сделать заголовочный файл с функциями по разделению массива на 2 части.
+3. Сделать программу, которая показывала бы работу функций из ваших заголовочных файлов.
+4*. Выложить результаты на GitHub.*/
 
 #include <iostream>
 #include "Array split.h"
@@ -16,34 +16,34 @@ int main() {
 	int const SIZE = 12;
 	int const SIZE_2 = 6;
 	int array[SIZE];
-	int first_half[SIZE_2]; // РџРµСЂРІРѕРµ РїРѕР»СѓРіРѕРґРёРµ
-	int second_half[SIZE_2]; // Р’С‚РѕСЂРѕРµ РїРѕР»СѓРіРѕРґРёРµ
+	int first_half[SIZE_2]; // Первое полугодие
+	int second_half[SIZE_2]; // Второе полугодие
 
 	ManualInputToArray(array, SIZE);
 	system("cls");
 	
-	cout << "Р’РµСЃСЊ РіРѕРґ: ";
-	Conclusion(array, SIZE);
-	cout << "РџРµСЂРІС‹Рµ РїРѕР» РіРѕРґР°: ";
+	cout << "Весь год: ";
+		Conclusion(array, SIZE);
+	cout << "Первые пол года: ";
 	ArraySplit_1_Half(array, first_half, SIZE_2);
 	Conclusion(first_half, SIZE_2);
-	cout << "Р’С‚РѕСЂС‹Рµ РїРѕР» РіРѕРґР°: ";
+	cout << "Вторые пол года: ";
 	ArraySplit_2_Half(array, second_half, SIZE_2);
 	Conclusion(second_half, SIZE_2);
 
 	int summa_1_array = Summa(first_half, SIZE_2);
 	int summa_2_array = Summa(second_half, SIZE_2);
 	int summa_array = Summa(array, SIZE);
-	cout << "РЎСѓРјРјР° Р·Р° РіРѕРґ: " << summa_array << endl;
-	cout << "Р—Р° РїРµСЂРІРѕС‹Рµ РїРѕР» РіРѕРґР° РІС‹ Р·Р°СЂР°Р±СЂРѕС‚Р°Р»Рё: " << summa_1_array << endl;
-	cout << "Р—Р° РІС‚РѕСЂС‹Рµ РїРѕР» РіРѕРґР° РІС‹ Р·Р°СЂР°Р±СЂРѕС‚Р°Р»Рё: " << summa_2_array << endl << endl;
+	cout << "Сумма за год: " << summa_array << endl;
+	cout << "За первоые пол года вы зарабротали: " << summa_1_array << endl;
+	cout << "За вторые пол года вы зарабротали: " << summa_2_array << endl << endl;
 	
 	int average_value = AverageValue(summa_array, SIZE);
-	cout << "РЎСЂРµРґРЅРµРµ Р·Р° РіРѕРґ: " << average_value << endl;
+	cout << "Среднее за год: " << average_value << endl;
 	average_value = AverageValue(summa_1_array, SIZE_2);
-	cout << "РЎСЂРµРґРЅРµРµ Р·Р° РїРµСЂРІС‹Рµ РїРѕР» РіРѕРґР°: " << average_value << endl;
+	cout << "Среднее за первые пол года: " << average_value << endl;
 	average_value = AverageValue(summa_2_array, SIZE_2);
-	cout << "РЎСЂРµРґРЅРµРµ Р·Р° РІС‚РѕСЂС‹Рµ РїРѕР» РіРѕРґР°: " << average_value << endl;
+	cout << "Среднее за вторые пол года: " << average_value << endl;
 
 	return 0;
 }
