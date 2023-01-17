@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-	/*Пользователь вводит с клавиатуры расстояние
-до аэропорта и время, за которое нужно доехать. 
-Вычислить скорость, с которой ему нужно ехать.
+	/*РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІРІРѕРґРёС‚ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹ СЂР°СЃСЃС‚РѕСЏРЅРёРµ
+	РґРѕ Р°СЌСЂРѕРїРѕСЂС‚Р° Рё РІСЂРµРјСЏ, Р·Р° РєРѕС‚РѕСЂРѕРµ РЅСѓР¶РЅРѕ РґРѕРµС…Р°С‚СЊ. 
+	Р’С‹С‡РёСЃР»РёС‚СЊ СЃРєРѕСЂРѕСЃС‚СЊ, СЃ РєРѕС‚РѕСЂРѕР№ РµРјСѓ РЅСѓР¶РЅРѕ РµС…Р°С‚СЊ.
 	*/
 	float distance_to_the_airport_in_meters = 0;
 	float time_to_the_airport_in_minutes = 0;
@@ -19,7 +19,7 @@ int main() {
 	float distance_to_the_airport_in_kilometers = distance_to_the_airport_in_meters / 1000;
 	float time_to_the_airport_per_hour = time_to_the_airport_in_minutes / 60;
 
-	// Скорость = растояние / время
+	// РЎРєРѕСЂРѕСЃС‚СЊ = СЂР°СЃС‚РѕСЏРЅРёРµ / РІСЂРµРјСЏ
 	int travel_speed = distance_to_the_airport_in_kilometers / time_to_the_airport_per_hour;
 	cout << "travel speed km / h: " << travel_speed << endl;
 
