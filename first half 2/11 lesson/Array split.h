@@ -1,5 +1,5 @@
 #pragma once
-//2. Сделать заголовочный файл с функциями по разделению массива на 2 части.
+//2. РЎРґРµР»Р°С‚СЊ Р·Р°РіРѕР»РѕРІРѕС‡РЅС‹Р№ С„Р°Р№Р» СЃ С„СѓРЅРєС†РёСЏРјРё РїРѕ СЂР°Р·РґРµР»РµРЅРёСЋ РјР°СЃСЃРёРІР° РЅР° 2 С‡Р°СЃС‚Рё.
 #include <iostream>
 #include <clocale>
 #include <stdlib.h>
@@ -15,7 +15,7 @@ void Conclusion(int array[], int size) {
 }
 void ManualInputToArray(int array[], int size) {
 	for (size_t i = 0; i < size; i++) {
-		cout << "Введите ваш доход за " << i + 1 << " месяц: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІР°С€ РґРѕС…РѕРґ Р·Р° " << i + 1 << " РјРµСЃСЏС†: ";
 		cin >> array[i];
 	}
 }
