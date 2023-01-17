@@ -1,6 +1,6 @@
-// Кравец Анастасия Сергеевна
-/*Напишите программу, которая выполняет поэлементную сумму двух массивов и результат заносит в третий массив.
-Элементы массивов можно сгенерировать в произвольном диапазоне.*/
+// РљСЂР°РІРµС† РђРЅР°СЃС‚Р°СЃРёСЏ РЎРµСЂРіРµРµРІРЅР°
+/*РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РІС‹РїРѕР»РЅСЏРµС‚ РїРѕСЌР»РµРјРµРЅС‚РЅСѓСЋ СЃСѓРјРјСѓ РґРІСѓС… РјР°СЃСЃРёРІРѕРІ Рё СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РЅРѕСЃРёС‚ РІ С‚СЂРµС‚РёР№ РјР°СЃСЃРёРІ.
+Р­Р»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІРѕРІ РјРѕР¶РЅРѕ СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РІ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ.*/
 
 #include <iostream>
 #include <clocale>
@@ -13,7 +13,7 @@ void Summ (int array_3[], int array_2[], int array_1[], int size){
 		array_3[i] = array_1[i] + array_2[i];
 	}
 }
-void Сonclusion(int array[], int size) {
+void Г‘onclusion(int array[], int size) {
 	cout << "{";
 	for (size_t i = 0; i < size; i++){
 		cout << array[i] << ", ";
@@ -41,14 +41,14 @@ int main() {
 	int array_3[SIZE];
 
 	NumberGenerator(array_1, SIZE);
-	cout << "Массив 1: ";
-	Сonclusion(array_1, SIZE);
+	cout << "РњР°СЃСЃРёРІ 1: ";
+	Г‘onclusion(array_1, SIZE);
 	NumberGenerator(array_2, SIZE);
-	cout << "Массив 2: ";
-	Сonclusion(array_2, SIZE);
+	cout << "РњР°СЃСЃРёРІ 2: ";
+	Г‘onclusion(array_2, SIZE);
 	Summ(array_3, array_2, array_1, SIZE);
-	cout << "Массив 3 в виде суммы двух массивов: ";
-	Сonclusion(array_3, SIZE);
+	cout << "РњР°СЃСЃРёРІ 3 РІ РІРёРґРµ СЃСѓРјРјС‹ РґРІСѓС… РјР°СЃСЃРёРІРѕРІ: ";
+	Г‘onclusion(array_3, SIZE);
 	
 	return 0;
 }
