@@ -23,7 +23,7 @@ int main() {
 	system("cls");
 	
 	cout << "Весь год: ";
-		Conclusion(array, SIZE);
+	Conclusion(array, SIZE);
 	cout << "Первые пол года: ";
 	ArraySplit_1_Half(array, first_half, SIZE_2);
 	Conclusion(first_half, SIZE_2);
