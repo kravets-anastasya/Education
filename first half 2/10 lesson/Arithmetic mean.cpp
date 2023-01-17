@@ -1,6 +1,6 @@
-// Кравец Анастасия Сергеевна
-/* Написать функцию, определяющую среднее
-арифметическое элементов передаваемого ей массива.*/
+// РљСЂР°РІРµС† РђРЅР°СЃС‚Р°СЃРёСЏ РЎРµСЂРіРµРµРІРЅР°
+/* РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ, РѕРїСЂРµРґРµР»СЏСЋС‰СѓСЋ СЃСЂРµРґРЅРµРµ
+Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РїРµСЂРµРґР°РІР°РµРјРѕРіРѕ РµР№ РјР°СЃСЃРёРІР°.*/
 
 #include <iostream>
 #include <clocale>
@@ -17,7 +17,7 @@ void NumberGenerator(int array[], int size) {
 	}
 
 }
-void Сonclusion(int array[], int size) {
+void Conclusion(int array[], int size) {
 	cout << "{";
 	for (size_t i = 0; i < size; i++) {
 		cout << array[i] << ", ";
@@ -39,12 +39,12 @@ int main() {
 	int array[SIZE];
 
 	NumberGenerator(array, SIZE);
-	Сonclusion(array, SIZE);
+	Conclusion(array, SIZE);
 	size_t summa = Summ(array, SIZE);
 
 	int arithmetic_mean = summa / SIZE;
 
-	cout << "Среднее арифметическое элементов: " << arithmetic_mean << endl;
+	cout << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ: " << arithmetic_mean << endl;
 
 	return 0;
 }
