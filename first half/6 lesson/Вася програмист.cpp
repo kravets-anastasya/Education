@@ -2,19 +2,19 @@
 using namespace std;
 
 int main() {
-	/*Вася работает програмистом и получает 50$
-	за каждые 100 строк кода. За каждое третье опоздание
-	Васю штрафуют на 20$.*/
+	/*Р’Р°СЃСЏ СЂР°Р±РѕС‚Р°РµС‚ РїСЂРѕРіСЂР°РјРёСЃС‚РѕРј Рё РїРѕР»СѓС‡Р°РµС‚ 50$
+	Р·Р° РєР°Р¶РґС‹Рµ 100 СЃС‚СЂРѕРє РєРѕРґР°. Р—Р° РєР°Р¶РґРѕРµ С‚СЂРµС‚СЊРµ РѕРїРѕР·РґР°РЅРёРµ
+	Р’Р°СЃСЋ С€С‚СЂР°С„СѓСЋС‚ РЅР° 20$.*/
 
 	const size_t payment_of_100_lines = 50;
 	const size_t penalty_for_every_3_delays = 20;
 	const size_t penalty_for_each_number_of_days = 3;
 	const size_t number_of_lines_to_be_paid = 100;
 
-	size_t number_of_lines_of_code {}; //количество строк кода
-	size_t number_of_delays {}; // количество опозданий
-	size_t earnings {}; // заработок
-	short user_choice {}; // выбор пользователя
+	size_t number_of_lines_of_code {}; //РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РєРѕРґР°
+	size_t number_of_delays {}; // РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїРѕР·РґР°РЅРёР№
+	size_t earnings {}; // Р·Р°СЂР°Р±РѕС‚РѕРє
+	short user_choice {}; // РІС‹Р±РѕСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	
 	cout << R"(
 	Select one of the menu items according to the calculation method:
