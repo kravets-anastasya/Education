@@ -13,7 +13,7 @@ void Summ (int array_3[], int array_2[], int array_1[], int size){
 		array_3[i] = array_1[i] + array_2[i];
 	}
 }
-void Ñonclusion(int array[], int size) {
+void Conclusion(int array[], int size) {
 	cout << "{";
 	for (size_t i = 0; i < size; i++){
 		cout << array[i] << ", ";
@@ -42,13 +42,13 @@ int main() {
 
 	NumberGenerator(array_1, SIZE);
 	cout << "Массив 1: ";
-	Ñonclusion(array_1, SIZE);
+	Conclusion(array_1, SIZE);
 	NumberGenerator(array_2, SIZE);
 	cout << "Массив 2: ";
-	Ñonclusion(array_2, SIZE);
+	Conclusion(array_2, SIZE);
 	Summ(array_3, array_2, array_1, SIZE);
 	cout << "Массив 3 в виде суммы двух массивов: ";
-	Ñonclusion(array_3, SIZE);
+	Conclusion(array_3, SIZE);
 	
 	return 0;
 }
