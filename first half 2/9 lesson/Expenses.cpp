@@ -11,7 +11,7 @@
 
 using namespace std;
 void InputValue (int expenses[], int size) {
-	cout << "Ââåäèòå çíà÷åíèå " << endl;
+	cout << "Введите значение " << endl;
 	for (size_t i = 0; i < size; i++) {
 		cout << i + 1 << ": ";
 		cin >> expenses[i];
