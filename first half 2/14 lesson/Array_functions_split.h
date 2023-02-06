@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-//Функция подсчета положительных элементов
+//Р¤СѓРЅРєС†РёСЏ РїРѕРґСЃС‡РµС‚Р° РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 int CalcPositiveNumbers(int* arr, int size) {
     int positive = 0;
     for (int i = 0; i < size; ++i) {
@@ -13,7 +13,7 @@ int CalcPositiveNumbers(int* arr, int size) {
 
     return positive;
 }
-//Функция подсчета отрицательных элементов
+//Р¤СѓРЅРєС†РёСЏ РїРѕРґСЃС‡РµС‚Р° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 int CalcNegativeNumbers(int* arr, int size) {
     int negative = 0;
     for (int i = 0; i < size; ++i) {
@@ -24,7 +24,7 @@ int CalcNegativeNumbers(int* arr, int size) {
 
     return negative;
 }
-//Функция подсчета элементов нуля
+//Р¤СѓРЅРєС†РёСЏ РїРѕРґСЃС‡РµС‚Р° СЌР»РµРјРµРЅС‚РѕРІ РЅСѓР»СЏ
 int CalcZeros(int* arr, int size) {
     int zero = 0;
     for (int i = 0; i < size; ++i) {
@@ -35,7 +35,7 @@ int CalcZeros(int* arr, int size) {
 
     return zero;
 }
-//Функция удаления из массива положительных элементов
+//Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РёР· РјР°СЃСЃРёРІР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 int* CopyPositiveNumbers(int* arr, int size, int& new_size) {
     new_size = CalcPositiveNumbers(arr, size);
     int* positives = new int[new_size];
@@ -49,7 +49,7 @@ int* CopyPositiveNumbers(int* arr, int size, int& new_size) {
 
     return positives;
 }
-//Функция удаления из массива отрицательных элементов
+//Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РёР· РјР°СЃСЃРёРІР° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 int* CopyNegativeNumbers(int* arr, int size, int& new_size) {
     new_size = CalcNegativeNumbers(arr, size);
     int* negatives = new int[new_size];
@@ -63,7 +63,7 @@ int* CopyNegativeNumbers(int* arr, int size, int& new_size) {
 
     return negatives;
 }
-//Функция удаления из массива элементов нуля
+//Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РёР· РјР°СЃСЃРёРІР° СЌР»РµРјРµРЅС‚РѕРІ РЅСѓР»СЏ
 int* CopyZeros(int* arr, int size, int& new_size) {
     new_size = CalcZeros(arr, size);
     int* zeros = new int[new_size];
