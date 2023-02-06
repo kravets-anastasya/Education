@@ -1,7 +1,7 @@
-// Кравец Анастасия Сергеевна
-/*Написать функцию, которая получает указатель
-на статический массив и его размер. Функция распределяет положительные, отрицательные и нулевые элементы
-в отдельные динамические массивы.*/
+// РљСЂР°РІРµС† РђРЅР°СЃС‚Р°СЃРёСЏ РЎРµСЂРіРµРµРІРЅР°
+/*РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ, РєРѕС‚РѕСЂР°СЏ РїРѕР»СѓС‡Р°РµС‚ СѓРєР°Р·Р°С‚РµР»СЊ
+РЅР° СЃС‚Р°С‚РёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ Рё РµРіРѕ СЂР°Р·РјРµСЂ. Р¤СѓРЅРєС†РёСЏ СЂР°СЃРїСЂРµРґРµР»СЏРµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ, РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ Рё РЅСѓР»РµРІС‹Рµ СЌР»РµРјРµРЅС‚С‹
+РІ РѕС‚РґРµР»СЊРЅС‹Рµ РґРёРЅР°РјРёС‡РµСЃРєРёРµ РјР°СЃСЃРёРІС‹.*/
 
 #include <iostream>
 #include <clocale>
@@ -19,7 +19,7 @@ int main() {
 	int menu_selection{};
 	int array[size];
 
-	cout << "Выберете: 1- ввенсти вручную, 2- рандомные числа.\n";
+	cout << "Р’С‹Р±РµСЂРµС‚Рµ: 1- РІРІРµРЅСЃС‚Рё РІСЂСѓС‡РЅСѓСЋ, 2- СЂР°РЅРґРѕРјРЅС‹Рµ С‡РёСЃР»Р°.\n";
 	cin >> menu_selection;
 	if (menu_selection == 2) {
 		NumberGenerator(array, size);
@@ -28,23 +28,23 @@ int main() {
 		ManualInputToArray(array, size);
 	}
 	else {
-		cout << "Вы ввели неверное число!";
+		cout << "Р’С‹ РІРІРµР»Рё РЅРµРІРµСЂРЅРѕРµ С‡РёСЃР»Рѕ!";
 		return -1;
 	}
-	cout << "\n Ваш массив: \n";
+	cout << "\n Р’Р°С€ РјР°СЃСЃРёРІ: \n";
 	Conclusion(array, size);
 
-	cout << "\n Положительные числа: \n";
+	cout << "\n РџРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р°: \n";
 	int positive_size{};
 	int* positives = CopyPositiveNumbers(array, size, positive_size);
 	Conclusion(positives, positive_size);
 
-	cout << "\n Отрицательные числа: \n";
+	cout << "\n РћС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р°: \n";
 	int negative_size{};
 	int* negatives = CopyNegativeNumbers(array, size, negative_size);
 	Conclusion(negatives, negative_size);
 
-	cout << "\n Нули: \n";
+	cout << "\n РќСѓР»Рё: \n";
 	int zeros_size{};
 	int* zeros = CopyZeros(array, size, zeros_size);
 	Conclusion(zeros, zeros_size);
