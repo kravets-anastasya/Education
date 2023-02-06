@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-//Рандомайзер в массив.
+//Р Р°РЅРґРѕРјР°Р№Р·РµСЂ РІ РјР°СЃСЃРёРІ.
 void NumberGenerator(int array[], int size) {
 	srand(time(nullptr));
 	for (size_t i = 0; i < size; i++) {
@@ -12,15 +12,15 @@ void NumberGenerator(int array[], int size) {
 	}
 }
 
-//Ручной ввод в массив
+//Р СѓС‡РЅРѕР№ РІРІРѕРґ РІ РјР°СЃСЃРёРІ
 void ManualInputToArray(int array[], int size) {
 	for (size_t i = 0; i < size; i++) {
-		cout << "Введите " << i + 1 << " число: ";
+		cout << "Г‚ГўГҐГ¤ГЁГІГҐ " << i + 1 << " Г·ГЁГ±Г«Г®: ";
 		cin >> array[i];
 	}
 }
 
-//Вывод массива
+//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°
 void Conclusion(int array[], int size) {
 	cout << "{";
 	for (size_t i = 0; i < size; i++) {
