@@ -1,0 +1,38 @@
+/*
+Даны числа a и n. Посчитайте a^n рекурсивной функцией.
+
+Входные данные
+Вводится 2 целых числа a и n. (1≤a≤10^18,0≤n≤10^5)
+
+Выходные данные
+Выведите a^n.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+unsigned long long Sum(unsigned long long a, unsigned long long n, unsigned long long namber) {
+    if (n>1) {
+        namber *= a;
+        Sum(a, n-1, namber);
+    }
+    else {
+        return namber;
+    }
+}
+ 
+int main() {
+    unsigned long long a{};
+    unsigned long long n{};
+ 
+    cin >> a;
+    cin >> n;
+    unsigned long long namber{ a };
+    if (n == 0) {
+        cout << 1 << endl;
+        return 0;
+    }
+    cout << Sum(a, n, namber) << endl;
+    return 0;
+}
