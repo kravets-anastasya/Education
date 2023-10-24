@@ -1,0 +1,41 @@
+/*
+Дано целое четырехзначное число. Выяснить, является ли оно палиндромом, то есть таким числом, десятичная запись которого читается одинаково
+слева направо и справа налево.
+
+Входные данные
+Вводится целое четырехзначное число.
+
+Выходные данные
+Выведите "YES", если число является палиндромом, и "NO" в противном случае.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+    int user_number{};
+ 
+    cin >> user_number;
+ 
+	if (user_number <= 1000 || user_number >= 9999) {
+		return -1;
+	}
+    int number1 = ((user_number / 1000) % 10);
+    int number2 = ((user_number / 100) % 10);
+    int number3 = ((user_number / 10) % 10);
+    int number4 = (user_number % 10);
+ 
+	if (number1 == number4) {
+		if (number2 == number3) {
+			cout << "YES" << endl;
+		}else {
+	    	cout << "NO" << endl;
+	    }
+	}else {
+		cout << "NO" << endl;
+	}
+ 
+    return 0;
+}
