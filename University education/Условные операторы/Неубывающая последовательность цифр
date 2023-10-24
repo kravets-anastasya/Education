@@ -1,0 +1,46 @@
+/*
+Дано натуральное четырехзначное число. Определить, образуют ли цифры числа неубывающую последовательность.
+
+Входные данные
+Вводится натуральное четырехзначное число.
+
+Выходные данные
+Вывести "YES", если цифры числа образуют неубывающую последовательность, и "NO" в противном случае.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+    int user_number{};
+    cin >> user_number;
+ 
+	if (user_number < 1000 || user_number > 9999) {
+		return -1;
+	}
+	int number1 = ((user_number / 1000) % 10);
+	int number2 = ((user_number / 100) % 10);
+	int number3 = ((user_number / 10) % 10);
+	int number4 = (user_number % 10);
+ 
+	if (number1 <= number2) {
+		if (number2 <= number3) {
+			if (number3 <= number4) {
+				cout << "YES" << endl;
+			}
+			else {
+				cout << "NO" << endl;
+			}
+		}
+		else {
+			cout << "NO" << endl;
+		}
+	}
+	else {
+		cout << "NO" << endl;
+	}
+	
+    return 0;
+}
