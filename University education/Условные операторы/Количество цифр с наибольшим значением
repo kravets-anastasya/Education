@@ -1,0 +1,50 @@
+/*
+Дано натуральное четырехзначное число. Определить количество цифр с наибольшим значением в цифровой записи данного числа.
+
+Входные данные
+Вводится натуральное четырехзначное число.
+
+Выходные данные
+Вывести количество цифр с наибольшим значением в цифровой записи данного числа.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+    int user_number{};
+    cin >> user_number;
+ 
+	if (user_number < 1000 || user_number > 9999) {
+		return -1;
+	}
+	int number1 = ((user_number / 1000) % 10);
+	int number2 = ((user_number / 100) % 10);
+	int number3 = ((user_number / 10) % 10);
+	int number4 = (user_number % 10);
+ 
+	int number[4]{ number1,number2,number3,number4 };
+	int max{};
+	int a{};
+	if (number1 > number2 && number1 > number3 && number1 > number4) {
+		max = number1;
+	}
+	else if (number2 > number3 && number2 > number4) {
+		max = number2;
+	}
+	else if (number3 > number4) {
+		max = number3;
+	}
+	else {
+		max = number4;
+	}
+	for (size_t i = 0; i <= 4; i++){
+		if (number[i] == max) {
+			a++;
+		}
+	}
+	cout << a << endl;
+    return 0;
+}
