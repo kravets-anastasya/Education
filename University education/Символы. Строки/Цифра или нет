@@ -1,0 +1,26 @@
+/*
+Напишите программу, определяющую, является данный символ цифрой или нет.
+
+Входные данные
+Задан единственный символ c.
+
+Выходные данные
+Необходимо вывести строку «yes», если символ является цифрой, и строку «no» в противном случае.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	char user_symbol{};
+	cin >> user_symbol;
+ 
+	if (user_symbol >= '0' && user_symbol <= '9') {
+		cout << "yes";
+		return 0;
+	}else {
+		cout << "no";
+		return 0;
+	}
+}
