@@ -1,0 +1,29 @@
+/*
+Дано натуральное четырехзначное число N. Определить произведение его цифр.
+
+Входные данные
+В единственной строке содержится четырехзначное число N
+
+Выходные данные
+Выведите произведение его цифр.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main(){
+  size_t user_number{};
+	cin >> user_number;
+	if (user_number < 1000 || user_number > 9999) {
+		return -1;
+	}
+	size_t number1 = ((user_number / 1000) % 10);
+	size_t number2 = ((user_number / 100) % 10);
+	size_t number3 = ((user_number / 10) % 10);
+	size_t number4 = (user_number % 10);
+ 
+	cout << number1 * number2 * number3 * number4 << endl;
+ 
+  return 0;
+}
