@@ -1,0 +1,31 @@
+/*
+Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех этих чисел, не используя цикл.
+
+Входные данные
+Вводится последовательность целых чисел, оканчивающаяся числом 0 (само число 0 в последовательность не входит, а служит как признак ее окончания).
+
+Выходные данные
+Выведите ответ на задачу.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int Sum(int namber, int summa) {
+    cin >> namber;
+    if (namber != 0) {
+        summa += namber;
+        Sum(namber, summa);
+    }
+    else {
+        return summa;
+    }
+}
+ 
+int main() {
+    int namber{};
+    int summa{};
+    cout << Sum(namber, summa) << endl;
+    return 0;
+}
