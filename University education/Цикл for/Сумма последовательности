@@ -1,0 +1,25 @@
+/*
+Дано целое число A и целое число N(>0). Используя один цикл, найти сумму 1 + A + A2 + A3 + … + AN
+*/
+
+
+#include <iostream>
+using namespace std;
+int main() {
+long long n{};
+long long a{};
+long long t{1};
+ 
+cin >> a;
+cin >> n;
+ 
+long long summ{1};
+for (size_t i = 1; i <= n; i++) {
+     t*=a;
+    summ += t;
+}
+ 
+cout << summ << endl;
+ 
+return 0;
+}
