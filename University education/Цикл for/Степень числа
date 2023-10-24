@@ -1,0 +1,22 @@
+/*
+Дано целое число а и натуральное (целое неотрицательное) число n. Вычислить a^n.
+*/
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a{}; 
+    size_t n{};
+    
+    cin >> a;
+    cin >> n;
+    int namber{a};
+    for (size_t i = 0; i < n-1; i++) {
+        namber *= a;
+    }
+    
+    cout << namber << endl;
+ 
+    return 0;
+}
