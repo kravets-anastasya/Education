@@ -1,0 +1,30 @@
+/*
+Посчитать сумму цифр числа.
+
+Входные данные
+Вводится одно число
+
+Выходные данные
+Выведите сумму цифр введенного числа
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+	int user_number{};
+	cin >> user_number;
+ 
+	int number = (user_number % 10);
+	int a = 10;
+ 
+	while (user_number > 0) {
+		number += ((user_number / a) % 10);
+		user_number /= a;
+	}
+	cout << number << endl;
+ 
+	return 0;
+}
