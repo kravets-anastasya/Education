@@ -1,0 +1,37 @@
+/*
+Дано целое четырехзначное число. Определить, является ли сумма его цифр двузначным числом.
+
+Входные данные
+Вводится целое четырехзначное число.
+
+Выходные данные
+Выведите "YES", если сумма цифр введённого числа является двузначным числом, и "NO" в противном случае.
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+    int user_number{};
+    cin >> user_number;
+ 
+	if (user_number < 1000 || user_number > 9999) {
+		return -1;
+	}
+	int number1 = ((user_number / 1000) % 10);
+	int number2 = ((user_number / 100) % 10);
+	int number3 = ((user_number / 10) % 10);
+	int number4 = (user_number % 10);
+ 
+	int sum = number1 + number2 + number3 + number4;
+	if (sum > 9 && sum  <= 99) {
+		cout << "YES" << endl;
+	}
+	else {
+		cout << "NO" << endl;
+	}
+	
+    return 0;
+}
