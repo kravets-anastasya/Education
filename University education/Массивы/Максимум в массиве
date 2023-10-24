@@ -1,0 +1,30 @@
+/*
+Входные данные
+Сначала задано число N (N ≤ 10000) - количество элементов в массиве. Далее через пробел записаны N целых чисел - элементы массива.
+
+Выходные данные
+Необходимо вывести значение наибольшего элемента в массиве.
+*/
+
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n{};
+    int masiv[10000];
+ 
+    cin >> n;
+    for (size_t i = 0; i < n; i++)    {
+        cin >> masiv[i];
+    }
+    int max = masiv[0];
+    for (size_t i = 0; i < n; i++){
+        if (max < masiv[i]) {
+            max = masiv[i];
+        }
+    }
+    cout << max << endl;
+ 
+    return 0;
+}
