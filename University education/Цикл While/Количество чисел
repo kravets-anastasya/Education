@@ -1,0 +1,24 @@
+/*
+Вводится последовательность чисел до тех пор, пока не будет введено два равных числа подряд. Посчитать количество чисел в последовательности.
+*/
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n{}; 
+    int a{};
+    int sum{1};
+    cin >> n;
+    while (true) {
+        cin >> a;
+        sum++;
+        if (n == a) {
+            break;
+        }
+        n = a;
+    }
+    cout << sum << endl;
+ 
+    return 0;
+}
