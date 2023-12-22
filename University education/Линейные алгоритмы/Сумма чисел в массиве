@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int* array = new int[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> array[i];
+    }
+    int max_sum = array[0];
+    int current_sum = array[0];
+    int start_i = 0;
+    int end_i = 0;
+    int temp_start_i = 0;
+    for (int i = 1; i < n; ++i) {
+        if (current_sum + array[i] > array[i]) {
+            current_sum += array[i];
+        }
+        else {
+            current_sum = array[i];
+            temp_start_i = i;
+        }
+        if (current_sum > max_sum || (current_sum == max_sum && (i - temp_start_i < end_i - start_i))) {
+            max_sum = current_sum;
+            start_i = temp_start_i;
+            end_i = i;
+        }
+    }
+    cout << start_i + 1 << " " << end_i + 1 << '\n';
+    delete[] array;
+    return 0;
+}
