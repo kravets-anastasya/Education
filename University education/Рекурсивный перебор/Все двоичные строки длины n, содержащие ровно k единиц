@@ -1,0 +1,17 @@
+#include <algorithm>
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+int main(int argc, char* argv[])
+{
+    int k, n;
+    cin >> n >> k;
+    string s(n-k,'0');
+    s += string(k,'1');
+    do
+    {
+        cout << s << endl;
+    } while(next_permutation(s.begin(),s.end()));
+}
