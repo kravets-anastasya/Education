@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+void print(int n) {
+    vector <int> permutation(n);
+    for (int i = 0; i < n; ++i) {
+        permutation[i] = i + 1;
+    }
+    do {
+        for (int i = 0; i < n; ++i) {
+            cout << permutation[i] << " ";
+        }
+        cout << endl;
+    } while (next_permutation(permutation.begin(), permutation.end()));
+}
+int main() {
+    int N;
+    cin >> N;
+    print(N);
+    return 0;
+}
