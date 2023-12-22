@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+ 
+ 
+void f(int n, int a,int b) {
+    if (n == 1) {
+        cout << n << ' '<< a << ' ' << b<<endl;
+        return;
+        
+    }
+    int c = 6 - a - b;
+    f(n - 1, a, c);
+    cout << n  << ' ' << a  << ' ' << b  << endl;;
+    f(n - 1, c, b);
+}
+int main()
+{
+    long long n, a=1,b=3;
+    cin >>n;
+    f(n, a,b);
+}
