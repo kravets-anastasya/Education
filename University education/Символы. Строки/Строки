@@ -1,0 +1,49 @@
+#include <iostream> 
+#include <string.h> 
+#include <string> 
+#include <stack> 
+ 
+using namespace std;
+ 
+int main() {
+ 
+    string t;
+    string s;
+    string initialString;
+ 
+    getline(cin, t);
+    getline(cin, s);
+ 
+    initialString = s;
+ 
+    int count{};
+    int currentPos{};
+    int{};
+ 
+    do
+    {
+        do
+        {
+            int foundPos = t.find(s, currentPos);
+ 
+            if (foundPos == string::npos) {
+                currentPos = 0;
+            }
+            else
+            {
+                count++;
+                currentPos = foundPos + 1;
+            }
+ 
+        } while (currentPos != 0);
+        if (s.size() > 0) {
+            s = (s + s[0]).erase(0, 1);
+        }
+ 
+    } while (s != initialString);
+ 
+    cout << count << endl;
+ 
+    return 0;
+ 
+}
