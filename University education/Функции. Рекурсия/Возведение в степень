@@ -1,0 +1,29 @@
+/*
+Даны числа a и n. Напишите функцию, которая возводит a в n-ю степень
+
+Входные данные
+На вход подаются целые числа a и n. a ≤ 109 + 7, n ≤ 1018
+
+Выходные данные
+Выведите an. Так как ответ может быть очень большим, то ответ вывести по модулю 109 + 7
+*/
+#include <iostream>
+using namespace std;
+const long long int m = 1E9+7;
+long long int f(long long int a, long long int n) {
+    if (n == 1)
+        return a % m;
+    if (n == 0)
+        return 1;
+    if (n % 2 == 0)
+        return  f ( (a*a)%m, n / 2 );
+    else
+        return (a * f ( a, n - 1 )) % m;
+}
+ 
+int main()
+{
+    long long int a, b;
+    cin >> a >> b;
+    cout << f(a, b);
+}
