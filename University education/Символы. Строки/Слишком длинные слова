@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+int main() {
+	string lines[100];
+	//getline(cin, line);
+	//int namber = line.size();
+	int namber{};
+	int f{};
+	
+	cin >> namber;
+	for (int i = 0; i < namber; i++) {
+		cin >> lines[i];
+	}
+	for (int i = 0; i < namber; i++) {
+		f = lines[i].size();
+		if (f > 10) {
+			cout << lines[i][0] << f - 2 << lines[i][f - 1] << endl;
+			continue;
+		}
+		cout << lines[i] << endl;
+	}
+ 
+	return 0;
+}
