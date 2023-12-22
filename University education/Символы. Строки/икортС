@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+int main() {
+	string line{};
+	getline(cin, line);
+	int namber = line.size();
+	
+	for (size_t i = 0; i < namber; ) {
+		cout << line[namber-1];
+		namber--;
+	}
+ 
+	return 0;
+}
