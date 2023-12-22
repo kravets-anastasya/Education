@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	int n,j; 
+	cin >> n;
+	vector <int> A(n+1);
+	vector <int> db(n+1);
+	for (int i = 1; i <= n; i++)
+	{
+		int d;
+		cin >> d;
+		A[i] = d;
+	}
+	db[0] = 0;
+	db[1] = A[1];
+	db[2] = max(db[1], db[0]) + A[2];
+	for (j = 3; j <= n; j++)
+	{
+		db[j] = max(db[j - 1], db[j - 2]) + A[j];
+	}
+	cout << db[n];
+}
