@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+int main() {
+	string line{};
+	getline(cin, line);
+	int namber = line.size();
+	int k{};
+	cin >> k;
+	char j{};
+	for (size_t i = 0; i < namber; i++){
+		j = (char)line[i] - k;
+		if (j<65) {
+			char p = 65 - j;
+			j = 90 - p+1;
+		}
+		cout << j;
+	}
+ 
+	return 0;
+}
