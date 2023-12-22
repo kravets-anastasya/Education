@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+int main() {
+	string line;
+	getline(cin, line);
+	int namber = line.size();
+	string f;
+	
+	for (int i = namber-1; i >= 0; i--) {
+		f += line[i];
+	}
+	if (line == f) {
+		cout << "Yes";
+	}
+	else {
+		cout << "No";
+	}
+ 
+	return 0;
+}
