@@ -1,0 +1,14 @@
+
+n,k=map(int,input().split())
+a=[];m=[]
+for i in range(n):
+    m.append(k**i)
+m.reverse()
+for i in range(k**n):
+    a.append([])
+    l=i
+    for j in range(n):
+        a[i].append(l//m[j]+1)
+        l=l%m[j]
+for i in range(len(a)):
+    print(*a[i])
