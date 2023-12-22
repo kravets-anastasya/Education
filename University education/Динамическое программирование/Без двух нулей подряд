@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+ 
+using namespace std;
+ 
+int main() {
+    int n, k;
+    cin >> n >> k;
+    vector <long long> c(n + 1);
+    c[1] = k - 1; 
+    c[2] = k * (k - 1); 
+    for (int z = 3; z <= n; z++) 
+        c[z] = (k - 1) * (c[z - 1] + c[z - 2]);
+    cout << c[n];
+    return 0;
+}
