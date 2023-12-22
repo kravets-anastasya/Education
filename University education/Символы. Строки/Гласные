@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+int main() {
+	string line{};
+	getline(cin, line);
+	int namber = line.size();
+	int counter{};
+	for (size_t i = 0; i < namber; i++) {
+		if (line[i] == 'A' || line[i] == 'a' ||
+			line[i] == 'I' || line[i] == 'i' ||
+			line[i] == 'U' || line[i] == 'u' ||
+			line[i] == 'E' || line[i] == 'e' ||
+			line[i] == 'O' || line[i] == 'o') {
+			counter++;
+		}
+	}
+	cout << counter;
+ 
+	return 0;
+}
